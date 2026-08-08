@@ -192,21 +192,13 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row">
-              <input
-                type="url"
-                value={url}
-                onChange={(e) => {
-                  setUrl(e.target.value);
-                  setError("");
-                }}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" && !loading) {
-                    handleSummarize();
-                  }
-                }}
-                placeholder="Paste YouTube video URL..."
-                className="h-14 min-w-0 flex-1 rounded-2xl border border-white/10 bg-black/40 px-5 text-sm text-white outline-none placeholder:text-zinc-600 transition focus:border-sky-400/50 focus:ring-2 focus:ring-sky-400/10"
-              />
+             <input
+  type="url"
+  value={url}
+  onChange={(e) => setUrl(e.target.value)}
+  placeholder="Paste YouTube video URL..."
+  className="h-16 w-full min-w-0 flex-1 rounded-2xl border border-sky-400/20 bg-black/50 px-5 text-base text-white outline-none placeholder:text-zinc-500 transition-all duration-300 focus:border-sky-400/60 focus:ring-2 focus:ring-sky-400/20 sm:h-14 sm:text-sm"
+/>
 
               <button
                 onClick={handleSummarize}
@@ -442,57 +434,51 @@ export default function Home() {
       {/* ========================================================= */}
       {/* FOOTER */}
       {/* ========================================================= */}
+<footer className="relative z-10 border-t border-white/5 px-5 py-10">
+  <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-7 sm:flex-row">
 
-      <footer className="relative z-10 border-t border-white/[0.06] bg-black/30 px-5 py-10 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-6xl flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex items-center gap-3">
-            
+    {/* Brand */}
+    <div className="flex items-center gap-3">
+      <img
+        src="/logo.png"
+        alt="KrishAIWorks Logo"
+        className="h-12 w-12 rounded-full border border-sky-400/20 object-cover shadow-lg shadow-sky-500/10"
+      />
 
-           <div className="flex items-center gap-3 text-center sm:text-left">
-  <div className="relative h-10 w-10 overflow-hidden rounded-full border border-sky-400/20 bg-white/10 shadow-lg shadow-sky-500/10">
-    <img
-      src="/logo.png"
-      alt="KrishAIWorks Logo"
-      className="h-full w-full object-cover"
-    />
+      <div>
+        <p className="font-semibold text-white">
+          KrishAIWorks
+        </p>
+
+        <p className="mt-1 text-xs text-zinc-600">
+          AI Solutions That Work
+        </p>
+      </div>
+    </div>
+
+    {/* Instagram */}
+    <a
+      href="https://instagram.com/KrishAIWorks"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-sm text-zinc-500 transition hover:text-sky-400"
+    >
+      Instagram · @KrishAIWorks
+    </a>
+
+    {/* Copyright */}
+    <div className="text-center sm:text-right">
+      <p className="text-xs text-zinc-600">
+        © 2026 KrishAIWorks
+      </p>
+
+      <p className="mt-1 text-xs text-zinc-700">
+        Built with AI.
+      </p>
+    </div>
+
   </div>
-
-  <div>
-    <p className="font-semibold text-white">
-      KrishAIWorks
-    </p>
-
-    <p className="mt-1 text-xs text-zinc-600">
-      AI Solutions That Work
-    </p>
-  </div>
-</div>
-          </div>
-
-          <div className="flex flex-wrap items-center justify-center gap-5 text-xs text-zinc-600">
-            <a
-              href="#features"
-              className="transition hover:text-sky-400"
-            >
-              Features
-            </a>
-
-            <a href="#how" className="transition hover:text-sky-400">
-              How To Use
-            </a>
-
-            <a href="#faq" className="transition hover:text-sky-400">
-              FAQ
-            </a>
-          </div>
-
-          <p className="text-center text-xs text-zinc-700 sm:text-right">
-            © 2026 KrishAIWorks
-            <br />
-            Built with AI.
-          </p>
-        </div>
-      </footer>
+</footer>
     </main>
   );
 }
