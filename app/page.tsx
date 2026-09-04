@@ -430,12 +430,114 @@ export default function Home() {
           </div>
         </div>
       </section>
+{/* ========================================================= */}
+{/* FOOTER */}
+{/* ========================================================= */}
 
-      {/* ========================================================= */}
-      {/* FOOTER */}
-      {/* ========================================================= */}
 <footer className="relative z-10 border-t border-white/5 px-5 py-10">
-  <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-7 sm:flex-row">
+
+  {/* ========================================================= */}
+  {/* RELATED TOOLS */}
+  {/* ========================================================= */}
+
+  <div className="mx-auto max-w-6xl">
+
+    <div className="mb-8 text-center">
+      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-400/70">
+        Explore More
+      </p>
+
+      <h3 className="mt-2 text-xl font-semibold text-white">
+        More AI Productivity Tools
+      </h3>
+
+      <p className="mt-2 text-sm text-zinc-500">
+        Explore more useful tools from KrishAIWorks.
+      </p>
+    </div>
+
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+      {/* AI Study Assistant */}
+      <a
+        href="https://aistudyassistant.krishaiworks.com/"
+        className="group rounded-2xl border border-sky-400/10 bg-white/[0.02] p-5 transition hover:border-sky-400/30 hover:bg-sky-400/[0.04]"
+      >
+        <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl border border-sky-400/20 bg-sky-400/10 text-lg">
+          🎓
+        </div>
+
+        <h4 className="font-semibold text-white transition group-hover:text-sky-400">
+          AI Study Assistant
+        </h4>
+
+        <p className="mt-2 text-xs leading-5 text-zinc-500">
+          Get AI-powered help with studying, learning, and revision.
+        </p>
+      </a>
+
+      {/* Smart Notes */}
+      <a
+        href="https://smartnotes.krishaiworks.com/"
+        className="group rounded-2xl border border-sky-400/10 bg-white/[0.02] p-5 transition hover:border-sky-400/30 hover:bg-sky-400/[0.04]"
+      >
+        <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl border border-sky-400/20 bg-sky-400/10 text-lg">
+          📝
+        </div>
+
+        <h4 className="font-semibold text-white transition group-hover:text-sky-400">
+          Smart Notes
+        </h4>
+
+        <p className="mt-2 text-xs leading-5 text-zinc-500">
+          Turn information into clear, organized, and useful notes.
+        </p>
+      </a>
+
+      {/* AI YouTube Title & Description Generator */}
+      <a
+        href="https://aiyoutubetitledescriptiongenerator.krishaiworks.com/"
+        className="group rounded-2xl border border-sky-400/10 bg-white/[0.02] p-5 transition hover:border-sky-400/30 hover:bg-sky-400/[0.04]"
+      >
+        <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl border border-sky-400/20 bg-sky-400/10 text-lg">
+          🎬
+        </div>
+
+        <h4 className="font-semibold text-white transition group-hover:text-sky-400">
+          AI YouTube Title & Description Generator
+        </h4>
+
+        <p className="mt-2 text-xs leading-5 text-zinc-500">
+          Create engaging YouTube titles and descriptions with AI.
+        </p>
+      </a>
+
+      {/* AI Subtitle Generator */}
+      <a
+        href="https://aisubtitlegenerator.krishaiworks.com/"
+        className="group rounded-2xl border border-sky-400/10 bg-white/[0.02] p-5 transition hover:border-sky-400/30 hover:bg-sky-400/[0.04]"
+      >
+        <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl border border-sky-400/20 bg-sky-400/10 text-lg">
+          💬
+        </div>
+
+        <h4 className="font-semibold text-white transition group-hover:text-sky-400">
+          AI Subtitle Generator
+        </h4>
+
+        <p className="mt-2 text-xs leading-5 text-zinc-500">
+          Generate subtitles and captions for your videos with AI.
+        </p>
+      </a>
+
+    </div>
+  </div>
+
+  {/* ========================================================= */}
+  {/* ORIGINAL FOOTER */}
+  {/* ========================================================= */}
+
+  <div className="mx-auto mt-10 flex max-w-6xl flex-col items-center justify-between gap-7 border-t border-white/5 pt-10 sm:flex-row">
 
     {/* Brand */}
     <div className="flex items-center gap-3">
@@ -469,7 +571,7 @@ export default function Home() {
     {/* Copyright */}
     <div className="text-center sm:text-right">
       <p className="text-xs text-zinc-600">
-        © 2026 KrishAIWorks
+        © {new Date().getFullYear()} KrishAIWorks
       </p>
 
       <p className="mt-1 text-xs text-zinc-700">
@@ -478,6 +580,7 @@ export default function Home() {
     </div>
 
   </div>
+
 </footer>
     </main>
   );
