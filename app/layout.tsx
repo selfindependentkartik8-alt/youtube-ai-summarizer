@@ -89,6 +89,71 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://krishaiworks.com/#organization",
+      name: "KrishAIWorks",
+      url: "https://krishaiworks.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://krishaiworks.com/logo.png",
+        width: 512,
+        height: 512,
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://krishaiworks.com/#website",
+      url: "https://krishaiworks.com",
+      name: "KrishAIWorks",
+      description:
+        "AI-powered tools, productivity utilities, automation, chatbots, websites and custom digital solutions.",
+      publisher: {
+        "@id": "https://krishaiworks.com/#organization",
+      },
+      inLanguage: "en",
+    },
+    {
+      "@type": "WebApplication",
+      "@id":
+        "https://youtubeaisummarizer.krishaiworks.com/#webapplication",
+      name: "YouTube AI Summarizer",
+      url: "https://youtubeaisummarizer.krishaiworks.com",
+      description:
+        "Turn YouTube videos into clean, structured AI notes in seconds. Extract key ideas, important details and takeaways with KrishAIWorks.",
+      applicationCategory: "MultimediaApplication",
+      operatingSystem: "Any",
+      browserRequirements: "Requires a modern web browser.",
+      isPartOf: {
+        "@id": "https://krishaiworks.com/#website",
+      },
+      publisher: {
+        "@id": "https://krishaiworks.com/#organization",
+      },
+    },
+    {
+      "@type": "WebPage",
+      "@id":
+        "https://youtubeaisummarizer.krishaiworks.com/#webpage",
+      url: "https://youtubeaisummarizer.krishaiworks.com",
+      name: "YouTube AI Summarizer | Turn Videos Into Smart Notes",
+      description:
+        "Turn YouTube videos into clean, structured AI notes in seconds. Extract key ideas, important details and takeaways with KrishAIWorks.",
+      isPartOf: {
+        "@id": "https://krishaiworks.com/#website",
+      },
+      about: {
+        "@id":
+          "https://youtubeaisummarizer.krishaiworks.com/#webapplication",
+      },
+      inLanguage: "en",
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -98,6 +163,14 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {children}
+
+        <script
+          id="youtube-ai-summarizer-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd),
+          }}
+        />
 
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-BS6TSMM1ZR"
